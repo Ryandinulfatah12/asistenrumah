@@ -78,6 +78,7 @@
                                     @if ($order->user_id != null)
                                         <p class="text-muted text-italic">{{ __('A copy or your order summary has been sent to') }} {{ $order->user->email }}</p>
                                     @endif
+                                    <b class="text-warning">Cek website secara berkala untuk pembaruan informasi pemesanan</b>
                                 </div>
                                 <div class="mb-4">
                                     <h5 class="strong-600 mb-3 border-bottom pb-2">{{__('Ringkasan Pesanan')}}</h5>
@@ -113,10 +114,6 @@
                                                 <tr>
                                                     <td class="w-50 strong-600">{{__('Order status')}}:</td>
                                                     <td>{{ ucfirst(str_replace('_', ' ', $status)) }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="w-50 strong-600">{{__('Biaya Administrasi Website')}}:</td>
-                                                    <td class="text-warning">Ditinjau admin</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="w-50 strong-600">{{__('Biaya Administrasi Penyalur')}}:</td>

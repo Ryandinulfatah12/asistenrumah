@@ -174,21 +174,9 @@
                                                             <label class="payment_option mb-4" data-toggle="tooltip" data-title="Pesan Sekarang!">
                                                                 <input type="radio" id="" name="payment_option" value="cash_on_delivery" checked>
                                                                 <span>
-                                                                    <img loading="lazy"  src="{{ asset('frontend/images/icons/cards/bca.png')}}" class="img-fluid w-80">
+                                                                    <img loading="lazy"  src="{{ asset('frontend/images/icons/cards/accept-terms.png')}}" class="img-fluid w-80">
                                                                 </span>
                                                             </label>
-                                                        </div>
-                                                        <div class="alert alert-primary" role="alert">
-                                                        <h4 class="alert-heading">Pembayaran Administrasi Website</h4>
-                                                            <p>Untuk melanjutkan Pesanan pekerja, sesuai dengan Syarat dan Ketentuan kami adalah membayar biaya administrasi website (layanan)</p>
-
-                                                            <ul class="list-group">
-                                                                <li class="list-group-item text-dark text-strong">BCA atas nama Kiki Rohayati</li>
-                                                                <li class="list-group-item text-dark text-strong">Nomor Rekening : 6871386631</li>
-                                                                <li class="list-group-item text-dark text-strong">Nominal : Rp. 100.000 (Seratus ribu rupiah) </li>
-                                                            </ul>
-                                                            <b>Setelah melakukan Pembayaran harap Foto/Screenshoot bukti transfer ke</b><br>
-                                                            <a class="btn btn-success" href="https://api.whatsapp.com/send/?phone=628111091312&text=halo%20asistenrumah%20saya%20mau%20kirim%20bukti%20transfer" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i> Kirim bukti Transfer</a>
                                                         </div>
                                                     @endif
                                                 @endif

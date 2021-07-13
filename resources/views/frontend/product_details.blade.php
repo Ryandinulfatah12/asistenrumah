@@ -84,14 +84,15 @@
                                 <div class="col-6">
                                     <!-- Rating stars -->
                                     <div class="rating">
-                                        @php
+                                        <!-- @php
                                             $total = 0;
                                             $total += $detailedProduct->reviews->count();
                                         @endphp
                                         <span class="star-rating">
                                             {{ renderStarRating($detailedProduct->rating) }}
                                         </span>
-                                        <span class="rating-count ml-1">({{ $total }} {{__('reviews')}})</span>
+                                        <span class="rating-count ml-1">(Rating)</span> -->
+                                        <span>Lokasi pekerja : {{ $detailedProduct->unit }}</span>
                                     </div>
                                 </div>
                                 <div class="col-6 text-right">
@@ -539,10 +540,10 @@
                                         <h4 class="title text-truncate">
                                             <a href="{{ route('product', $top_product->slug) }}" class="d-block">{{ $top_product->name }}</a>
                                         </h4>
-                                        <div class="badge bg-light">{{$top_product->unit}}</div>
+                                        <div class="badge bg-light">Lokasi : {{$top_product->unit}}</div>
                                         <br>
                                         <div class="star-rating star-rating-sm mt-1">
-                                            {{ renderStarRating($top_product->rating) }}
+                                            <!-- {{ renderStarRating($top_product->rating) }} -->
                                         </div>
                                         <div class="price-box">
                                             <!-- @if(home_base_price($top_product->id) != home_discounted_base_price($top_product->id))
@@ -575,9 +576,9 @@
                                         <a href="#tab_default_3" data-toggle="tab" class="nav-link text-uppercase strong-600">{{__('Downloads')}}</a>
                                     </li>
                                 @endif -->
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a href="#tab_default_4" data-toggle="tab" class="nav-link text-uppercase strong-600">{{__('Reviews')}}</a>
-                                </li>
+                                </li> -->
                             </ul>
 
                             <div class="tab-content pt-0">
@@ -764,10 +765,11 @@
                                                 <h2 class="product-title mb-0 p-0 text-truncate">
                                                     <a href="{{ route('product', $related_product->slug) }}">{{ __($related_product->name) }}</a>
                                                 </h2>
-                                                <div class="badge bg-light">{{$related_product->unit}}</div>
+                                                <div class="badge bg-light">Lokasi : {{$related_product->unit}}</div>
                                                 <br>
                                                 <div class="star-rating star-rating-sm mb-2">
-                                                    {{ renderStarRating($related_product->rating) }}
+                                                    <!-- {{ renderStarRating($related_product->rating) }} -->
+
                                                 </div>
                                             </div>
                                         </div>

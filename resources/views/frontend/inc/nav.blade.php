@@ -507,18 +507,6 @@
                                     </div>
                                 </div>
 
-                                <div class="d-none d-lg-inline-block">
-                                    <div class="nav-wishlist-box" id="wishlist">
-                                        <p class="nav-box-link">
-                                            <i class="la la-users d-inline-block nav-box-icon"></i>
-                                            <span class="nav-box-text d-none d-xl-inline-block">{{__('Pekerja Tersedia')}}</span>
-                                            <?php 
-                                                $hitungpekerja = App\Product::all();
-                                            ?>
-                                            <span class="nav-box-number">{{ $hitungpekerja->count() }}</span>
-                                        </p>
-                                    </div>
-                                </div>
                                 <!-- DRAFT -->
                                 <!-- <div class="d-inline-block" data-hover="dropdown">
                                     <div class="nav-cart-box dropdown" id="cart_items">

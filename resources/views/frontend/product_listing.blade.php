@@ -329,11 +329,11 @@
                                                     @endif -->
                                                     <span class="product-price strong-600">{{ ($product->category->name) }}</span>
                                                 </div>
-                                                <div class="star-rating star-rating-sm mt-1">
+                                                <!-- <div class="star-rating star-rating-sm mt-1">
                                                     {{ renderStarRating($product->rating) }}
-                                                </div>
+                                                </div> -->
                                                 <h2 class="product-title p-0">
-                                                    <a href="{{ route('product', $product->slug) }}" class=" text-truncate">{{ __($product->name) }}</a>
+                                                    <a href="{{ route('product', $product->slug) }}" class=" text-truncate">{{ __($product->name) }} <span class="badge badge-primary float-right">{{ $product->video_link }} tahun</span></a>
                                                 </h2>
                                                 @if (\App\Addon::where('unique_identifier', 'club_point')->first() != null && \App\Addon::where('unique_identifier', 'club_point')->first()->activated)
                                                     <div class="club-point mt-2 bg-soft-base-1 border-light-base-1 border">

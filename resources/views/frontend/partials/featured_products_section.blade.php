@@ -28,9 +28,9 @@
                                         <span class="product-price strong-600">{{ home_discounted_base_price($product->id) }}</span>
                                     </div> -->
                                     <!-- END -->
-                                    <div class="star-rating star-rating-sm mt-1">
+                                    <!-- <div class="star-rating star-rating-sm mt-1">
                                         {{ renderStarRating($product->rating) }}
-                                    </div>
+                                    </div> -->
 
                                     <h2 class="product-title p-0 text-truncate-2">
                                         <a href="{{ route('product', $product->slug) }}">{{ __($product->name) }}</a>

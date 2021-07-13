@@ -213,14 +213,43 @@
 
     </div> -->
 
-    <div class="jumbotron text-center">
+    @auth
+    <div class="mb-4">
         <div class="container">
-        <img src="{{ asset('frontend/images/jumbotron.png') }}" class="img-fluid" alt="Jumbotron CTA">
-            <h1 class="display-4">Hai, Mom's</h1>
-            <p class="lead">Gimana mom's udah ketemu pekerja yang cocok buat rumahmu ?</p>
+            <div class="row gutters-10">
+                @foreach (\App\Banner::where('position', 2)->where('published', 1)->get() as $key => $banner)
+                    <div class="col-lg-{{ 12/count(\App\Banner::where('position', 2)->where('published', 1)->get()) }}">
+                        <div class="media-banner mb-3 mb-lg-0">
+                            <a href="{{ $banner->url }}" target="_blank" class="banner-container">
+                                <img src="{{ asset('frontend/images/placeholder-rect.jpg') }}" data-src="{{ asset($banner->photo) }}" alt="{{ env('APP_NAME') }} promo" class="img-fluid lazyload">
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+    @endauth
+
+    <div id="section_best_sellers">
+
+    </div>
+
+    <!-- Testimonial -->
+
+    <div class="jumbotron text-center">
+        <div id="ilustrasi" class="container">
+
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BiTNMrziTpg?rel=0" allowfullscreen></iframe>
+            </div>
+
+            <h1 class="display-4 mt-3">Hai mom's</h1>
+            <p class="lead mt-3">Gimana mom's udah ketemu pekerja yang cocok buat rumahmu ?</p>
             <a class="btn btn-light btn-lg" href="https://api.whatsapp.com/send/?phone=628111091312&text=%22Halo%20Admin%20AsistenRumah.com%20saya%20perlu%20bantuan%20nih..%22"><i class="fa fa-whatsapp" aria-hidden="true"></i> Konsultasi sekarang</a>
         </div>
     </div>
+    
 
     @if(\App\BusinessSetting::where('type', 'classified_product')->first()->value == 1)
         @php
@@ -274,28 +303,6 @@
            </section>
        @endif
    @endif
-
-    @auth
-    <div class="mb-4">
-        <div class="container">
-            <div class="row gutters-10">
-                @foreach (\App\Banner::where('position', 2)->where('published', 1)->get() as $key => $banner)
-                    <div class="col-lg-{{ 12/count(\App\Banner::where('position', 2)->where('published', 1)->get()) }}">
-                        <div class="media-banner mb-3 mb-lg-0">
-                            <a href="{{ $banner->url }}" target="_blank" class="banner-container">
-                                <img src="{{ asset('frontend/images/placeholder-rect.jpg') }}" data-src="{{ asset($banner->photo) }}" alt="{{ env('APP_NAME') }} promo" class="img-fluid lazyload">
-                            </a>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
-    @endauth
-
-    <div id="section_best_sellers">
-
-    </div>
 
     <section class="mb-3">
         <div class="container">

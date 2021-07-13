@@ -36,14 +36,14 @@
                                     </div>
                                     <div class="col-8 border-left">
                                         <div class="p-3">
-                                            <strong class="badge bg-secondary text-uppercase text-white">{{ ($product->category->name) }} | {{ ($product->video_link) }} tahun</strong>
+                                            <strong class="badge bg-secondary text-uppercase text-white">{{ ($product->category->name) }}</strong>
                                             <h2 class="product-title mb-0 p-0 text-truncate-2">
-                                                <a href="{{ route('product', $product->slug) }}">{{ __($product->name) }}</a>
-                                                <small>{{ ($product->unit) }}</small>
+                                                <a href="{{ route('product', $product->slug) }}">{{ __($product->name) }} <span class="text-success text-bold">({{ ($product->video_link) }} tahun)</span></a>
+                                                <small>Lokasi : {{ ($product->unit) }}</small>
                                             </h2>
-                                            <div class="star-rating star-rating-sm mb-2">
-                                                {{ renderStarRating($product->rating) }}
-                                            </div>
+                                            <!-- <div class="star-rating star-rating-sm mb-2">
+                                                {{ renderStarRating($product->rating ) }}
+                                            </div> -->
                                             <!-- PRICE DIHILANGKAN -->
                                             <!-- <div class="clearfix">
                                                 <div class="price-box float-left">

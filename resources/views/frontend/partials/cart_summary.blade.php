@@ -80,21 +80,12 @@
                     </tr>
 
                     <div class="row my-5">
-                        <div class="col-sm-6">
+                        <div class="col-sm">
                             <div class="card">
                             <div class="card-body bg-white">
                                 <h5 class="card-title">Administrasi Penyalur</h5>
                                 <p class="card-text">Anda perlu membayar biaya admin untuk pengambilan pekerja dari penyalur ini.</p>
                                 <button type="button" class="btn btn-success btn-lg">{{ $product->pdf }}</button>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="card">
-                            <div class="card-body bg-success text-white">
-                                <h5 class="card-title">Administrasi Website</h5>
-                                <p class="card-text">Admin ini berupa layanan/jasa pengambilah pekerja melalui website AsistenRumah.com.</p>
-                                <button type="button" class="btn btn-warning btn-lg">Rp. 100.000</button>
                             </div>
                             </div>
                         </div>
